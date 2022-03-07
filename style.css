@@ -1,0 +1,223 @@
+@font-face {
+  src: url(./fonts/Montserrat-Regular.woff) format('woff');
+  font-family: 'montserrat';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url(./fonts/Montserrat-SemiBold.woff) format('woff');
+  font-family: 'montserrat';
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  src: url(./fonts/Montserrat-Bold.woff) format('woff');
+  font-family: 'montserrat';
+  font-style: normal;
+  font-weight: 800;
+}
+
+
+
+
+.page {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'montserrat', sans-serif;
+  background-color: rgb(253, 244, 255);
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 30% 65% 5%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+  'header cont .'
+  'header cont .'
+  'header cont .'
+  'footer footer footer';
+}
+
+/*****************/
+
+.header {
+  grid-area: header;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-left: 25px;
+  height: 100vh;
+  position: sticky;
+  top: 1px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+
+
+}
+
+.header__subtitle {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.input {
+  border-radius: 25px;
+  border: none;
+  padding: 8px 15px;
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+.input-img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 228px;
+}
+.input::placeholder {
+  font-size: 12px;
+}
+
+/***************/
+.content {
+  grid-area: cont;
+}
+.content__img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 735px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.content__img-alps {
+  margin-bottom: 30px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("./img/alps.jpg");
+  background-position-y: center;
+}
+.content__img-everest {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url("./img/everest.jpg");
+  background-position-y: center;
+  background-size: cover;
+}
+
+
+.content__text {
+  width: 735px;
+  margin: 0 auto;
+  display: flex;
+  color: rgb(255, 255, 255);
+}
+
+.content__text-title {
+  align-self: flex-start;
+  margin: 0;
+  margin-left: 30px;
+  font-size: 23px;
+  line-height: 29px;
+  font-weight: 600;
+}
+.content__text-paragraph {
+  margin: 0;
+  margin-left: 80px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.content__text-paragraph-everest {
+  margin-left: 140px;
+}
+
+
+
+
+/* ************* */
+
+.cards {
+  background-color: #fff;
+  padding-top: 65px;
+  padding-bottom: 55px;
+  width: 735px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.card {
+  margin: 0;
+  padding-right: 30px;
+
+}
+
+.card:nth-last-of-type(1) {
+  padding-right: 0;
+}
+
+.card__img {
+  width: 290px;
+  height: 290px;
+  border-radius: 20px;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 58px;
+  font-weight: 600;
+}
+
+.card__pargraph {
+  margin: 0;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.card__pargraph:last-of-type {
+  margin-top: 20px;
+}
+
+/*******************/
+
+.footer {
+  position: relative;
+  grid-area: footer;
+  display: flex;
+  width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 100px;
+  background-color: #fff;
+}
+.logo {
+  padding-left: 35px;
+  width: 25px;
+
+}
+.footer__paragraph {
+  margin: 0;
+  padding-right: 35px;
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 400;
+}
